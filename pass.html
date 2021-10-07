@@ -20,10 +20,33 @@
                 alert("access denied");
             }
         }
+        var usingImage = 1;
+function newImage() {
+
+
+
+switch (usingImage) {
+case 0:
+document.getElementById("imgClickAndChange").src = "Impala.jpg";
+usingImage = 1;
+break;
+case 1:
+document.getElementById("imgClickAndChange").src = "Monkey.jpg";
+usingImage = 2;
+break;
+case 2:
+document.getElementById("imgClickAndChange").src = "tiger.jpg";
+usingImage = 0;
+break;
+default:
+document.getElementById("imgClickAndChange").src = "Monkey.jpg";
+}
+}
     </script>
 </head>
 <body>
     <h2>Pass phrase by Hitesh Reddy Tirumala Reddy</h2>
+   
     <form>
         <label for="secretphrase">Enter the secret phrase </label>
         <input type="password" id="secretphrase" name="secretphrase" value="Let me in"> <br>
@@ -34,6 +57,12 @@
     </form>
 
     <p id="result">Attempts display here </p>
+    <div class="container">
+        <b><i>
+        <h3> Animals Image</h3>
+        </b></i>
+        <img src="tiger.jpg" onClick="newImage()" id="imgClickAndChange" alt="tiger" width="200" height="200">
+        </div>
     
 </body>
 </html>
